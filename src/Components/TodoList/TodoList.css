@@ -1,0 +1,25 @@
+.to-do__main {
+    margin: 20px 0 0 0;
+    flex: 1 1 auto;
+}
+
+.to-do__button-add {
+    width: 290px;
+    height: 61px;
+    border-radius: 25px;
+    background: linear-gradient(90deg, #A8D2A5 0%, #ACD4E1 115.2%);
+    font-size: 18px;
+    line-height: 161%;
+    color: #3E3B3B;
+    box-shadow: 0 4px 4px #ACD4E1;
+    cursor: pointer;
+    transition: box-shadow .3s;
+}
+
+.to-do__button-add:hover {
+    box-shadow: 0 4px 4px #7dc3da;
+}
+
+.to-do__button-add:active {
+    box-shadow: 0 4px 4px #ACD4E1;
+}
