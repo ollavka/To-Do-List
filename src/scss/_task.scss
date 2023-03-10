@@ -1,0 +1,125 @@
+.list-item__top {
+    position: relative;
+    display: flex;
+}
+.list-item {
+    margin: 40px 0 0 0;
+
+    &__checker {
+        cursor: pointer;
+        user-select: none;
+
+        img {
+            position: absolute;
+            left: 5px;
+            top: 3px;
+            transition: all .4s;
+            pointer-events: none;
+        }
+    }
+
+    &__checker > img:first-child {
+        opacity: 1;
+    }
+
+    &__checker > img:last-child {
+        opacity: 0;
+    }
+
+    &__title {
+        padding: 6px 0 0 10px;
+        font-size: 20px;
+        line-height: 161%;
+        color: #3E3B3B;
+        transition: all .4s;
+        word-wrap: break-word;
+        max-width: 80%;
+
+        &.change {
+            color: #919191;
+        }
+    }
+
+    &__description {
+        font-size: 16px;
+        line-height: 164%;
+        color: #3E3B3B;
+        transition: all .4s;
+        word-wrap: break-word;
+        width: 100%;
+
+        &.change {
+            color: #919191;
+        }
+    }
+
+    &__line {
+        margin-top: 5px;
+        width: calc(100% - 12px);
+        height: 3px;
+        background: #3E3B3B;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    &__checker {
+        width: 40px;
+        background: transparent;
+    }
+
+    &__buttons {
+        display: flex;
+        align-self: center;
+        gap: 30px;
+        margin: 0 12px 0 auto;
+
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            padding: .5rem;
+            background: transparent;
+            transition: background-color .3s ease;
+            cursor: pointer;
+            user-select: none;
+
+            
+
+            span {
+                font-size: 1.75rem;
+            }
+
+            &:hover {
+                background: #c9c9c9;
+            }
+
+            img {
+                pointer-events: none;
+            }
+        }
+    }
+
+    &__remove-task {
+        color: #d80505;
+    }
+
+    &__change-task {
+        color: #024c2a;
+    }
+
+    &.completed {
+        .list-item__title,
+        .list-item__description {
+            color: #968989;
+            text-decoration: line-through;
+        }
+
+        .list-item__checker > img:first-child {
+            opacity: 0;
+        }
+
+        .list-item__checker > img:last-child {
+            opacity: 1;
+        }
+    }
+}
